@@ -10,9 +10,7 @@ public class ProdTests extends BaseTests{
     public void testProdToApp()
     {
         NavigateBarPage navigateBarPage= new NavigateBarPage (driver);
-        LoginPage loginPage = navigateBarPage.clickLoginFromNavigatBar();
-        HomePage homePage = loginPage.loginToApp("Marwahashem@gmail.com", "Marwa2313505");
-        Assert.assertEquals(homePage.verifyHomePage(),"Marwa");
+
         ProdPage prodPage = navigateBarPage.clickProdFromNavBar();
         Assert.assertEquals(prodPage.getAllProdText(), "ALL PRODUCTS");
         ProdSearchPage prodSearchPage = prodPage.searchprod("Jeans");

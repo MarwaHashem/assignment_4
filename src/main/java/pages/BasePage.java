@@ -35,13 +35,16 @@ public class BasePage {
     public String getTextOfElement (By elementLocator){ return locateElement(elementLocator).getText();}
     public int getSizeOfSearched (By elementLocator){ return listElements(elementLocator).size();}
 
-    public WebElement hoverToElement(By elementLocator){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(elementLocator));
-        wait.until(ExpectedConditions.elementToBeClickable (elementLocator));
-
-        Actions actions = new Actions(driver);
-         actions.moveToElement(driver.findElement(elementLocator));
+    public void hoverToElement(By elementLocator){
+         Actions actions = new Actions(driver);
+         actions.moveToElement(locateElement(elementLocator));
          actions.perform();
-        return driver.findElement(elementLocator);
+
      }
+    public void scrollToElement(int y_pixcel){
+        Actions actions = new Actions(driver);
+        actions.scrollByAmount(0,y_pixcel);
+        actions.perform();
+
+    }
 }

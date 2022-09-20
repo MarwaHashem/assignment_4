@@ -13,7 +13,7 @@ public class AddToCartPage extends BasePage {
     public AddToCartPage(WebDriver driver) {
         super(driver);
     }
-    public ProdPage addedMsg() {
+    public ProdPage clickContiueShoping() {
       //getTextOfElement(alertMsg);
       clickElement(continueBtn);
      return new ProdPage(driver);

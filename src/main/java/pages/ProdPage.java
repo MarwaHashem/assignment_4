@@ -19,18 +19,29 @@ public class ProdPage extends BasePage{
     private By addToCart=By.xpath("(//a[@class=\"btn btn-default add-to-cart\"])[1]");
     private By addToCartSecondProd=By.xpath("(//a[@class=\"btn btn-default add-to-cart\"])[4]");
 
+
+    public void scrolToFirstProd(){
+        scrollToElement(600);
+    }
+    public void hoverToFirstProd(){
+        hoverToElement(firstProd);
+    }
+
     public ProdSearchPage searchprod (String search_prod) {
         typeOnInputField(searchBox, search_prod);
         clickElement(searchBtn);
         return new ProdSearchPage(driver);
     }
-    public AddToCartPage hoverFirstProd(){
-        hoverToElement(firstProd);
+    public AddToCartPage clickToFirstAddToCart(){
+
         clickElement(addToCart);
         return  new AddToCartPage(driver);
     }
-    public AddToCartPage hoverSecondProd(){
+    public void hoverToSecondProd(){
         hoverToElement(secondProd);
+    }
+    public AddToCartPage clickToSecondAddToCart(){
+
         clickElement(addToCartSecondProd);
         return  new AddToCartPage(driver);
     }

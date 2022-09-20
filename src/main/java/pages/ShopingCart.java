@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 public class ShopingCart extends BasePage{
 
-    private By bothProd   = By.xpath("//td[@class=\"cart_product\"]");
-    private By price   = By.xpath("//td[@class=\"cart_price\"]");
-    private By qunt  = By.xpath("//td[@class=\"cart_quantity\"]");
-    private By totalPrice  = By.xpath("//td[@class=\"cart_total\"]");
+    private By bothProd   = By.className("cart_product");
+    private By price   = By.className("cart_price");
+    private By qunt  = By.className("cart_quantity");
+    private By totalPrice  = By.className("cart_total");
 
     public ShopingCart(WebDriver driver) {
         super(driver);
