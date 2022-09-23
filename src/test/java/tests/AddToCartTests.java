@@ -21,9 +21,13 @@ public class AddToCartTests extends BaseTests {
         prodPage.clickToSecondAddToCart();
         ShopingCart shopingCart = addToCartPage.verifyProd();
         Assert.assertEquals(shopingCart.myShopingCart(), 2);
-        Assert.assertEquals(shopingCart.verifyPriceOfBothProd(), 2);
-        Assert.assertEquals(shopingCart.verifyQuntOfBothProd(), 2);
-        Assert.assertEquals(shopingCart.verifyTotalPriceOfBothProd(), 2);
+        Assert.assertEquals(shopingCart.getpriceFirstProd(), "Rs. 500");
+        Assert.assertEquals(shopingCart.getpriceSecondProd(), "Rs. 400");
+        Assert.assertEquals(shopingCart.getquntFirstProd(), "1");
+        Assert.assertEquals(shopingCart.getquntSecondProd(), "1");
+        Assert.assertEquals(shopingCart.gettotalFirstProd(), "Rs. 500");
+        Assert.assertEquals(shopingCart.gettotalSecondProd(), "Rs. 400");
+
 
 
     }
